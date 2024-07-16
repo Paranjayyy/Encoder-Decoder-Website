@@ -1,0 +1,68 @@
+<?php 
+    include("connection.php");
+    include("login.php")
+?>
+<html>
+    <head>
+        <title>Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link/>
+    </head>
+    <body>
+    <div></div>
+        <div id="form">
+             
+            
+       
+        <div class="container">
+            <div class="wrapper">
+              <div class="title"><span>Login</span></div>
+              
+              <form name="form" action="loginfile.php" onsubmit="return isvalid()" method="POST">
+                <div class="row">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Username" id="user" name="user">
+                </div>
+                <div class="row">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" placeholder="Password" required name="pass" id="pass">
+                </div>
+
+
+
+                <div class="pass"><a href="pages/forgot-password.html">Forgot password?</a></div>
+                <div class="row button">
+                  <input type="submit" id="btn" value="Login" name = "submit"/>
+                </div>
+                <div class="signup-link">Not a member? <a href="pages/create-account.html">Signup now</a></div>
+              </form>
+            </div>
+          </div>
+
+
+
+
+    </div>
+        <script>
+            function isvalid(){
+                var user = document.form.user.value;
+                var pass = document.form.pass.value;
+                if(user.length=="" && pass.length==""){
+                    alert(" Username and password field is empty!!!");
+                    return false;
+                }
+                else if(user.length==""){
+                    alert(" Username field is empty!!!");
+                    return false;
+                }
+                else if(pass.length==""){
+                    alert(" Password field is empty!!!");
+                    return false;
+                }
+                
+            }
+        </script>
+    </body>
+</html>
+
